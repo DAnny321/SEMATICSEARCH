@@ -1,0 +1,28 @@
+{
+  "id": "7385F33F-41CA-431A-9C2B-8A7A8A7FDC5C",
+  "name": "Sematic Search",
+  "publisher": "Default publisher",
+  "version": "1.0.0.1",
+  "brief": "BOB copilot",
+  "description": "BOB copilot",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "24.2.0.0",
+  "idRanges": [
+    {      
+      "from": 80300,
+      "to": 80400
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "13.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
