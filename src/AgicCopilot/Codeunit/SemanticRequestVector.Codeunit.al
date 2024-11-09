@@ -47,13 +47,13 @@ codeunit 80310 "GPT Semantic Request Vector"
         content.GetHeaders(contentHeaders);
         contentHeaders.Clear();
         contentHeaders.Add('Content-Type', 'application/json');
-        contentHeaders.Add('api-key', 'a52563bb9db94caa806616cdb032e5a7');
+        contentHeaders.Add('api-key', 'XXXXXXX');
 
         // Assigning content to request.Content will actually create a copy of the content and assign it.
         // After this line, modifying the content variable or its associated headers will not reflect in 
         // the content associated with the request message
         request.Content := content;
-        request.SetRequestUri('https://testdatabc.openai.azure.com/openai/deployments/embedding/embeddings?api-version=2023-05-15');
+        request.SetRequestUri('https://XXXXXXXX.openai.azure.com/openai/deployments/embedding/embeddings?api-version=2023-05-15');
         //request.SetRequestUri('https://oai-agicbc-demo.openai.azure.com/openai/deployments/TestCopilotBC/chat/completions?api-version=2024-05-01-preview');
         request.Method := 'POST';
 
