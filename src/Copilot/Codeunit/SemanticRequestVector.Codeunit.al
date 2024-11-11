@@ -25,7 +25,7 @@ codeunit 80310 "GPT Semantic Request Vector"
      * It then reads the JSON response and extracts the relevant content to populate BobResponse.
      * If the HTTP status code is not 200 or 202, an error is raised with the JSON response.
      */
-    procedure GetAnswer(var UserQuestion: text; var BobResponse: text; Cosine: Boolean)
+    procedure GetAnswer(var UserQuestion: text; var parResponse: text; Cosine: Boolean)
     var
         client: HttpClient;
         request: HttpRequestMessage;
@@ -64,9 +64,9 @@ codeunit 80310 "GPT Semantic Request Vector"
 
         if ((response.HttpStatusCode = 200) or (response.HttpStatusCode = 202)) then begin
             // Extract the content from the JSON response
-            BobResponse := extractContent(JsonResponse);
+            parResponse := extractContent(JsonResponse);
             if Cosine then
-                BobResponse := MatchEmbedded.MatchVectoritem(BobResponse);
+                parResponse := MatchEmbedded.MatchVectoritem(parResponse);
 
         end
         else
